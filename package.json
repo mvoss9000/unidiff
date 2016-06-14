@@ -1,0 +1,21 @@
+{
+   "name": "unidiff",
+   "version": "0.0.3",
+   "description": "diff with unified diff format handling",
+   "main": "unidiff.js",
+   "devDependencies": {
+      "tape": "^4.4.0"
+   },
+   "dependencies": {
+      "diff": "^2.2.2"
+   },
+   "scripts": {
+      "link": "npm link tape",
+      "test": "tape test/test_*.js | faucet"
+   },
+   "keywords": [
+      "example"
+   ],
+   "author": "Matthew Voss",
+   "license": "MIT"
+}
