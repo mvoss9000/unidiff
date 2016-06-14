@@ -6,6 +6,10 @@
    "devDependencies": {
       "tape": "^4.4.0"
    },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/mvoss9000/unidiff.git"
+   },
    "dependencies": {
       "diff": "^2.2.2"
    },
