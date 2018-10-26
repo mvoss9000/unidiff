@@ -2,8 +2,13 @@
    "name": "unidiff",
    "version": "0.0.4",
    "description": "diff with unified diff format handling",
-   "main": "unidiff.js",
+   "main": "dist/index.js",
    "devDependencies": {
+      "faucet": "0.0.1",
+      "rollup": "^0.66.6",
+      "rollup-plugin-commonjs": "^9.2.0",
+      "rollup-plugin-node-resolve": "^3.4.0",
+      "rollup-plugin-terser": "^3.0.0",
       "tape": "^4.4.0"
    },
    "repository": {
@@ -15,8 +20,15 @@
    },
    "scripts": {
       "link": "npm link tape",
-      "test": "tape test/test_*.js | faucet"
+      "test": "tape test/test_*.js | faucet",
+      "build": "node rollup.js",
+      "prepublishOnly": "npm run build"
    },
+   "files": [
+      "unidiff.js",
+      "hunk.js",
+      "dist"
+   ],
    "keywords": [
       "example"
    ],
