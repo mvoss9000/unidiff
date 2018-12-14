@@ -1,15 +1,12 @@
 'use strict'
 
-var test = require('tape').test
-var unidiff = require('../unidiff.js')
-var fs = require('fs')
-var table = require('./table.js')
+let test = require('tape').test
+let unidiff = require('../unidiff.js')
 
 test('unidiff: check inherited api', function (t) {
 
 
-    var fns = Object.keys(unidiff)
-    var expectedFns = [
+    let expectedFns = [
     "Diff",
         "__esModule",
         "applyPatch",
@@ -33,21 +30,21 @@ test('unidiff: check inherited api', function (t) {
         "structuredPatch"
     ]
     t.plan(expectedFns.length)
-    expectedFns.forEach(function(fname){
+    expectedFns.forEach(function (fname){
         t.ok(unidiff.hasOwnProperty(fname), 'has function ' + fname)
     })
 })
 
 
-test('unidiff: diffAsText - zero changes', function(t) {
-    var a = ['line 1', 'line 2', 'line 3']
+test('unidiff: diffAsText - zero changes', function (t) {
+    let a = ['line 1', 'line 2', 'line 3']
 
     t.plan(1)
     t.equals(unidiff.diffAsText(a, a), '')
 })
 
-test('unidiff: diffAsText - empty', function(t) {
-    var txt = 'line 1\nline 2\n'
+test('unidiff: diffAsText - empty', function (t) {
+    let txt = 'line 1\nline 2\n'
 
     t.plan(2)
     t.equals(unidiff.diffAsText(txt, ''), [
@@ -68,12 +65,12 @@ test('unidiff: diffAsText - empty', function(t) {
 })
 
 test('unidiff: diffAsText - add and remove', function (t) {
-    var a = []
+    let a = []
     for (let i = 1; i <= 12; i++) {
         a.push('line ' + i)
     }
 
-    var b = [
+    let b = [
         'line 1',
         // line 2
         'line 3',
@@ -207,13 +204,13 @@ test('unidiff: diffAsText - add and remove', function (t) {
 
 
 test('unidiff: diffAsText - replace', function (t) {
-    var a = []
+    let a = []
     for (let i = 1; i <= 12; i++) {
         a.push('line ' + i)
     }
 
     // modify every 3rd line from 0
-    var b = a.map(function (v) {
+    let b = a.map(function (v) {
         return v
     })
     for (let i = 0; i < b.length; i += 3) {
@@ -264,11 +261,11 @@ test('unidiff: diffAsText - replace', function (t) {
     ].join('\n'))
 })
 
-test('unidiff: assertEqual', function(t) {
+test('unidiff: assertEqual', function (t) {
     t.plan(4)
-    var lbl = 'foo'
-    var eqFn = function(expr, msg) {t.ok(expr, 'no diff'); t.assert(msg === lbl, 'label') }
-    var neqFn = function(expr, msg) {t.ok(!expr, 'has diff');t.assert(msg === lbl, 'label') }
+    let lbl = 'foo'
+    let eqFn = function(expr, msg) {t.ok(expr, 'no diff'); t.assert(msg === lbl, 'label') }
+    let neqFn = function(expr, msg) {t.ok(!expr, 'has diff');t.assert(msg === lbl, 'label') }
     unidiff.assertEqual([1,2,3], [1,2,3], eqFn, lbl)
     unidiff.assertEqual([1,2,3], [1,2,3,4], neqFn, lbl, function(s){})
 })

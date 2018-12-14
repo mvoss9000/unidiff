@@ -1,6 +1,6 @@
-var unidiff = require('../unidiff')
+let unidiff = require('../unidiff')
 
-var diff = unidiff.diffLines(
+let diff = unidiff.diffLines(
     'a quick\nbrown\nfox\njumped\nover\nthe\nlazy\ndog\n',
     'a quick\nbrown\ncat\njumped\nat\nthe\nnot-so-lazy\nfox\n'
 )
