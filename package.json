@@ -1,26 +1,25 @@
 {
    "name": "unidiff",
-   "version": "0.0.4",
+   "version": "1.0.0",
    "description": "diff with unified diff format handling",
    "main": "dist/index.js",
+   "dependencies": {
+      "diff": "^2.2.2"
+   },
    "devDependencies": {
-      "faucet": "0.0.1",
       "rollup": "^0.66.6",
       "rollup-plugin-commonjs": "^9.2.0",
       "rollup-plugin-node-resolve": "^3.4.0",
       "rollup-plugin-terser": "^3.0.0",
-      "tape": "^4.4.0"
+      "tape": "^4.9.1"
    },
    "repository": {
       "type": "git",
       "url": "https://github.com/mvoss9000/unidiff.git"
    },
-   "dependencies": {
-      "diff": "^2.2.2"
-   },
    "scripts": {
-      "link": "npm link tape",
-      "test": "tape test/test_*.js | faucet",
+      "test": "tape test/test_*.js",
+      "cov": "tap --coverage-report=html test/test_*.js",
       "build": "node rollup.js",
       "prepublishOnly": "npm run build"
    },

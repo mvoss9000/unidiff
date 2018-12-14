@@ -1,13 +1,12 @@
-# Created by .gitignore support plugin (hsz.mobi)
 .idea
-*.iml
 .DS_Store
+npm-debug.log
 node_modules
+*.iml
+*.tgz
+/dist
 */build
 */doc
 */docs
 */coverage
 */.npmrc
-npm-debug.log
-/dist
-*.tgz
