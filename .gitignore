@@ -9,3 +9,5 @@ node_modules
 */coverage
 */.npmrc
 npm-debug.log
+/dist
+*.tgz
