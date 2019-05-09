@@ -203,7 +203,7 @@ function makeHunks (changes, precontext, postcontext) {
         if (change.type === UNMODIFIED) {
             // add context
             let ctx_after  = ci > 0 ? postcontext : 0              // context lines following previous change
-            let ctx_before = ci < changes.length - 1? precontext : 0  // context lines preceding next change (iff there are more changes)
+            let ctx_before = ci < changes.length - 1 ? precontext : 0  // context lines preceding next change (iff there are more changes)
             let skip = Math.max(change.count - (ctx_after + ctx_before), 0)
             if (skip > 0) {
                 concatTo(lineChanges(change, ctx_after), lchanges)          // finish up previous hunk
