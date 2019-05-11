@@ -224,7 +224,7 @@ test('unidiff: diffAsText - replace', function (t) {
     t.equals(unidiff.diffAsText(a, b, {context: 1}), [
         '--- a',
         '+++ b',
-        '@@ -1,12 +1,12 @@',
+        '@@ -1,11 +1,11 @@',
         '-line 1',
         '+{line 1}',
         ' line 2',
@@ -239,8 +239,7 @@ test('unidiff: diffAsText - replace', function (t) {
         ' line 9',
         '-line 10',
         '+{line 10}',
-        ' line 11',
-        ' line 12'
+        ' line 11'
     ].join('\n'))
 
     t.equals(unidiff.diffAsText(a, b, {context: 0}), [
