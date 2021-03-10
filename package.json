@@ -4,7 +4,7 @@
    "description": "diff with unified diff format handling",
    "main": "dist/index.js",
    "dependencies": {
-      "diff": "^2.2.2"
+      "diff": "^5.0.0"
    },
    "devDependencies": {
       "rollup": "^0.66.6",
