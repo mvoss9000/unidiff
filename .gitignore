@@ -1,12 +1,1 @@
-.idea
-.DS_Store
-npm-debug.log
-node_modules
-*.iml
-*.tgz
-/dist
-*/build
-*/doc
-*/docs
-*/coverage
-*/.npmrc
+coverage
