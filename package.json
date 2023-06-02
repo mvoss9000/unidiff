@@ -1,8 +1,8 @@
 {
    "name": "unidiff",
-   "version": "1.0.3",
+   "version": "1.0.4",
    "description": "diff with unified diff format handling",
-   "main": "dist/index.js",
+   "main": "index.js",
    "dependencies": {
       "diff": "^5.1.0"
    },
@@ -15,11 +15,11 @@
       "url": "https://github.com/mvoss9000/unidiff.git"
    },
    "scripts": {
-      "test": "tape test/test_*.js",
-      "cov": "tap --coverage-report=html test/test_*.js"
+      "test": "tape test.js",
+      "cov": "tap --coverage-report=html test.js"
    },
    "files": [
-      "unidiff.js",
+      "index.js",
       "hunk.js"
    ],
    "keywords": [

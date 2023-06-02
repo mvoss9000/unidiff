@@ -1,4 +1,4 @@
-let unidiff = require('../unidiff')
+let unidiff = require('.')
 
 let diff = unidiff.diffLines(
     'a quick\nbrown\nfox\njumped\nover\nthe\nlazy\ndog\n',
