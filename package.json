@@ -22,8 +22,7 @@
    },
    "files": [
       "unidiff.js",
-      "hunk.js",
-      "dist"
+      "hunk.js"
    ],
    "keywords": [
       "example"
